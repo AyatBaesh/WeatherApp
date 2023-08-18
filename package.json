@@ -4,7 +4,10 @@
   "description": "weather app made in purpose to practice webAPIs and async await ",
   "main": "index.js",
   "scripts": {
-    "start": "webpack --config webpack.config.js"
+    "start": "webpack --config webpack.config.js",
+    "build": "webpack --mode=development",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -17,6 +20,7 @@
   },
   "homepage": "https://github.com/AyatBaesh/WeatherApp#readme",
   "devDependencies": {
+    "gh-pages": "^6.0.0",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4"
   }
