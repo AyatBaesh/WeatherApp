@@ -16,7 +16,7 @@
   \***************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   getWeather: () => (/* binding */ getWeather)\n/* harmony export */ });\nasync function getWeather(location){\r\n    try{\r\n        let response = await fetch(`https://api.weatherapi.com/v1/current.json?key=cc2785c69424465cbda213523231808&q=${location}`);\r\n        let weather =  await response.json();\r\n        // console.table(weather)\r\n        console.log(weather);\r\n        return weather;\r\n        \r\n    }catch(error){\r\n        console.log('Error in fetching data');\r\n    }\r\n    \r\n}\n\n//# sourceURL=webpack://weatherapp/./src/getWeather.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   getWeather: () => (/* binding */ getWeather)\n/* harmony export */ });\nasync function getWeather(location){\r\n    try{\r\n        let response = await fetch(`https://api.weatherapi.com/v1/current.json?key=cc2785c69424465cbda213523231808&q=${location}`,{\r\n            mode: 'cors'\r\n        });\r\n        let weather =  await response.json();\r\n        // console.table(weather)\r\n        console.log(weather);\r\n        return weather;\r\n        \r\n    }catch(error){\r\n        console.log('Error in fetching data');\r\n    }\r\n    \r\n}\n\n//# sourceURL=webpack://weatherapp/./src/getWeather.js?");
 
 /***/ }),
 
